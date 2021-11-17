@@ -19,9 +19,9 @@ char ** parse_args(char * line) {
 }
 
 int main(int argc, char *argv[]) {
-	char ** args = parse_args("cd home/Joshua/Documents");
+	char ** args = parse_args(argv[1]);
 	execvp(args[0], args);
-//	printf("args[0]: %s\targs[1]: %s\targs[2]: %s\t\n", args[0], args[1], args[2]);
+	printf("args[0]: %s\targs[1]: %s\targs[2]: %s\t\n", args[0], args[1], args[2]);
 	free(args);
 	return 0;
 }
